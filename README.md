@@ -23,13 +23,16 @@ See [https://www.virtualbox.org/manual/ch01.html#ovf](https://www.virtualbox.org
 
 Link to download VirtualBox: [https://www.virtualbox.org/](https://www.virtualbox.org/)
 
+# Change DNS of different services of TReSPASS platform
+TBD 
+
 # Steps to setup and access the trespass services
 1. Download ova file and save it on your disk;
 1. Import the ova to your virtual machine system;
 1. Check if the interface of the virtual machine is set to a host interface (bridged) connected to a network where a DHCP server is running;
 1. Start the machine;
 1. Wait for the logon console (The IP address of the machine should appears before the logon);
-1. On your desktop or laptop machine, if under Windows, open notepad as administrator, then open following file: c:\Windows\System32\Drivers\etc\hosts; if under Linux, open following file as administrator: /etc/hosts; if under Macos, open following file as administrator: /private/etc/hosts.
+1. On your desktop or laptop machine, if under Windows, open notepad as administrator, then open following file: **c:\Windows\System32\Drivers\etc\hosts**; if under Linux, open following file as administrator: **/etc/hosts**; if under Macos, open following file as administrator: **/private/etc/hosts**.
 1. append the file with following lines (replacing IPADDRESS with the IP address from step 5)
 IPADDRESS       trespass.eu
 IPADDRESS       cas.trespass.eu
@@ -38,6 +41,15 @@ IPADDRESS       arguesecure.trespass.eu
 IPADDRESS       interactor.trespass.eu
 IPADDRESS       redmine.trespass.eu
 IPADDRESS       tkblogs.trespass.eu
+1. Log-on to the machine console (pay attention to the keyboard which is set to swiss french, you can change it as explained in **Change Keyboard mapping** section. Switch to root with sudo su (enter same session password), edit /home/trespass/trespass-docker/fe.env file with **nano /home/trespass/trespass-docker/fe.env**, and modify following environment variables for email and recaptcha:
+RECAPTCHA_KEY=**CAN BE LEFT EMPTY, IN THIS CASE RECAPTCHA IS DISABLED ON REGISTRATION. ACTIVATING RECAPTCHA (i.e. PUTTING A KEY) REQUIRES TO CHANGES THE DNS NAME OF FRONT-END. SEE XXX SECTION**
+SMTP_HOST=
+SMTP_PORT=
+SMTP_USERNAME=
+SMTP_PASSWORD=
+SMTP_AUTH_ENABLED=**PUT true IF SMTP SERVER MUST CHECK AUTH, false OTHERWISE**
+SMTP_STARTTLS_ENABLED=**PUT true IF SMTP USES STARTTLS, false OTHERWISE**
+1. Restart services of the platform with following command: **/etc/init.d/startContainers**
 1. You can access the front-end with trespass.eu URL. A default user (administrator) has been defined with following credentials:
 Username: trespass
 Password: Tresp@ss1
