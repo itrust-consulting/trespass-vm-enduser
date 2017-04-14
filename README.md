@@ -41,8 +41,9 @@ IPADDRESS       arguesecure.trespass.eu
 IPADDRESS       interactor.trespass.eu
 IPADDRESS       redmine.trespass.eu
 IPADDRESS       tkblogs.trespass.eu
-1. Log-on to the machine console (pay attention to the keyboard which is set to swiss french, you can change it as explained in **Change Keyboard mapping** section. Switch to root with sudo su (enter same session password), edit /home/trespass/trespass-docker/fe.env file with **nano /home/trespass/trespass-docker/fe.env**, and modify following environment variables for email and recaptcha:
-RECAPTCHA_KEY=**CAN BE LEFT EMPTY, IN THIS CASE RECAPTCHA IS DISABLED ON REGISTRATION. ACTIVATING RECAPTCHA (i.e. PUTTING A KEY) REQUIRES TO CHANGES THE DNS NAME OF FRONT-END. SEE XXX SECTION**
+1. Log-on to the machine console using trespass as user and password (pay attention to the keyboard which is set to swiss french, you can change it as explained in **Change Keyboard mapping** section. Switch to root with sudo su (enter same session password), edit /home/trespass/trespass-docker/fe.env file with **nano /home/trespass/trespass-docker/fe.env**, and modify following environment variables for email and recaptcha:
+RECAPTCHA_SECRET_KEY=**CAN BE LEFT EMPTY, IN THIS CASE RECAPTCHA IS DISABLED ON REGISTRATION. ACTIVATING RECAPTCHA (i.e. PUTTING A KEY) REQUIRES TO CHANGE THE DNS NAME OF FRONT-END. SEE XXX SECTION**
+RECAPTCHA_PUBLIC_KEY=
 SMTP_HOST=
 SMTP_PORT=
 SMTP_USERNAME=
@@ -53,3 +54,9 @@ SMTP_STARTTLS_ENABLED=**PUT true IF SMTP USES STARTTLS, false OTHERWISE**
 1. You can access the front-end with trespass.eu URL. A default user (administrator) has been defined with following credentials:
 Username: trespass
 Password: Tresp@ss1
+1. Click on **Edit** link in **Manage account** section:
+![Edit profile](./drawing.png  "Edit profile")
+1. Click on **Edit contact** button:
+![Edit profile](./editcontact.png  "Edit contact")
+1. Edit **Email address** input with your email (so you will receive email on user registration), and click on **Save** button:
+![Edit profile](./editemail.png  "Edit email")
