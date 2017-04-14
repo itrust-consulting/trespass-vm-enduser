@@ -15,19 +15,10 @@ In order to change the mapping, please use following command:
 **sudo dpkg-reconfigure keyboard-configuration**
 
 # Importing the .ova file
-The .ova file for the virtual machine is available here: [https://www.itrust.lu/trespass-enduser.ova](https://www.itrust.lu/trespass-enduser.ova)
 We tested the import of the .ova file with VirtualBox v5.0.24.
 
-# Links
-## Virtualbox
-See [https://www.virtualbox.org/manual/ch01.html#ovf](https://www.virtualbox.org/manual/ch01.html#ovf) for more information on how to import in VirtualBox.
-Link to download VirtualBox: [https://www.virtualbox.org/](https://www.virtualbox.org/)
-
-## ReCAPTCHA
-See [https://www.google.com/recaptcha/intro/](https://www.google.com/recaptcha/intro/) for more information on reCAPTCHA
-
 # Steps to setup and access the trespass services
-1. Download ova file and save it on your disk;
+1. Download ova [file](https://www.itrust.lu/trespass-enduser.ova) and save it on your disk;
 1. Import the ova to your virtual machine system;
 1. Check that the interface of the virtual machine is set to a host interface (bridge mode) connected to a network where a DHCP server is running;
 1. Start the machine;
@@ -68,3 +59,14 @@ Password: Tresp@ss1
 ![Edit profile](./editcontact.png  "Edit contact")
 1. Edit **Email address** input with your email (so you will receive email on user registration), and click on **Save** button:  
 ![Edit profile](./editemail.png  "Edit email")
+
+# Links
+## Virtualbox
+### Installing
+See [https://www.virtualbox.org/manual/ch01.html#intro-installing](https://www.virtualbox.org/manual/ch01.html#intro-installing) for guidance on installation of VirtualBox
+Link to download VirtualBox: [https://www.virtualbox.org/](https://www.virtualbox.org/)
+### Importing ova to VirtualBox
+See [https://www.virtualbox.org/manual/ch01.html#ovf](https://www.virtualbox.org/manual/ch01.html#ovf) for more information on how to import in VirtualBox.
+
+## ReCAPTCHA
+See [https://www.google.com/recaptcha/intro/](https://www.google.com/recaptcha/intro/) for more information on reCAPTCHA
