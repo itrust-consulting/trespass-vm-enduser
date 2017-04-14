@@ -54,10 +54,9 @@ SMTP_STARTTLS_ENABLED=**PUT true IF SMTP USES STARTTLS, false OTHERWISE**
 1. You can access the front-end with trespass.eu URL. A default user (administrator) has been defined with following credentials:
 Username: trespass
 Password: Tresp@ss1
-1. Click on **Edit** link in **Manage account** section:
+1. Click on **Edit** link in **Manage account** section:  
 ![Edit profile](./home.png  "Edit profile")
-1. Click on **Edit contact** button:
-
+1. Click on **Edit contact** button:  
 ![Edit profile](./editcontact.png  "Edit contact")
-1. Edit **Email address** input with your email (so you will receive email on user registration), and click on **Save** button:
+1. Edit **Email address** input with your email (so you will receive email on user registration), and click on **Save** button:  
 ![Edit profile](./editemail.png  "Edit email")
