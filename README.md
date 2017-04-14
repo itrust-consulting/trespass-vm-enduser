@@ -68,7 +68,7 @@ Password: Tresp@ss1
 1. Log to the virtual machine using trespass as username and password
 1. Switch to root using **sudo su**
 1. Change directory to docker-compose folder with **cd trespass-docker**
-1. Get current configured DNS from docker-compose file with: **CUR_DNS_VALUE=$(egrep "\"cas." docker-compose.yml | grep 127 | egrep -o "cas[^:]*" | sed 's/cas.//')**
+1. Get current configured DNS from docker-compose file with: **CUR_DNS_VALUE=$(egrep "\\"cas." docker-compose.yml | grep 127 | egrep -o "cas[^:]*" | sed 's/cas.//')**
 1. Set **NEW_DNS_VALUE** with the DNS you want to set with **NEW_DNS_VALUE=**
 1. Change DNS value with **sed -i "s/DNS_VALUE=.*/DNS_VALUE=$NEW_DNS_VALUE/" cas.env fe.env mysql.env rp.env svn.env tkb-fe.env tkblogs.env /etc/init.d/startContainers**
 1. Change DNS value for docker-compose file with **sed "s/$CUR_DNS_VALUE/$NEW_DNS_VALUE/g" docker-compose.yml**
