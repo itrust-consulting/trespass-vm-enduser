@@ -53,7 +53,17 @@ SMTP_STARTTLS_ENABLED=**PUT true IF SMTP USES STARTTLS, false OTHERWISE**
 1. Quit nano with **CTRL+X**
 1. Restart services of the platform with following command: **/etc/init.d/startContainers**
 1. Wait for the end of the command
-
+1. On your desktop or laptop machine, if under Windows, open notepad as administrator, then open following file: **c:\Windows\System32\Drivers\etc\hosts**; if under Linux, open following file as administrator: **/etc/hosts**; if under MacOS, open following file as administrator: **/private/etc/hosts**.
+1. append the file with following lines (replacing IP_ADDRESS with the IP address of the virtual machine), and DNS_VALUE with the DNS you are setting  
+IP_ADDRESS	DNS_VALUE  
+IP_ADDRESS	cas.DNS_VALUE  
+IP_ADDRESS	svn.DNS_VALUE  
+IP_ADDRESS	arguesecure.DNS_VALUE  
+IP_ADDRESS      interactor.DNS_VALUE  
+IP_ADDRESS      redmine.DNS_VALUE  
+IP_ADDRESS      tkblogs.DNS_VALUE  
+1. You can access the front-end using your browser with the new DNS you set up. A default user (with administrator role) has been defined with following credentials:  
+Username: trespass  
 
 # Change Keyboard mapping
 The current keyboard mapping of the virtual machine is currently set to: **swiss french**
