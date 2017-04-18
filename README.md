@@ -41,20 +41,20 @@ Password: `Tresp@ss1`
 1. Log-on to the machine console using trespass as user and password (pay attention to the keyboard which is set to swiss french, you can change it as explained in **Change Keyboard mapping** section). 
 1. Switch to root with sudo su (enter same session password), edit /home/trespass/trespass-docker/fe.env file with ``nano /home/trespass/trespass-docker/fe.env``, and modify following environment variables for email notification and reCAPTCHA: 
 ``` 
-RECAPTCHA_SECRET_KEY=**CAN BE LEFT EMPTY, IN THIS CASE RECAPTCHA IS DISABLED ON REGISTRATION. ACTIVATING RECAPTCHA (i.e. PUTTING A KEY) REQUIRES TO CHANGE THE DNS NAME OF FRONT-END. SEE XXX SECTION**  
+RECAPTCHA_SECRET_KEY= //CAN BE LEFT EMPTY, IN THIS CASE RECAPTCHA IS DISABLED ON REGISTRATION. ACTIVATING RECAPTCHA (i.e. PUTTING A KEY) REQUIRES TO CHANGE THE DNS NAME OF FRONT-END. SEE XXX SECTION 
 RECAPTCHA_PUBLIC_KEY=  
 SMTP_HOST=  
 SMTP_PORT=  
 SMTP_USERNAME=  
 SMTP_PASSWORD=  
-SMTP_AUTH_ENABLED=**PUT true IF SMTP SERVER MUST CHECK AUTH, false OTHERWISE**  
-SMTP_STARTTLS_ENABLED=**PUT true IF SMTP USES STARTTLS, false OTHERWISE** ``` 
-1. Save your modification with **CTRL+O** and **Enter**
-1. Quit nano with **CTRL+X**
+SMTP_AUTH_ENABLED= //PUT true IF SMTP SERVER MUST CHECK AUTH, false OTHERWISE 
+SMTP_STARTTLS_ENABLED= //PUT true IF SMTP USES STARTTLS, false OTHERWISE ``` 
+1. Save your modification with `CTRL+O` and ``Enter``
+1. Quit nano with ``CTRL+X``
 1. Edit dnsvalue file with ``nano dnsvalue``
 1. Put the root DNS you want after equal sign in ``NEW_DNS_VALUE=``  line (e.g. trespass.eu)
-1. Save with **CTRL+O** and **Enter**
-1. Quit nano with **CTRL+X**
+1. Save with ``CTRL+O`` and ``Enter``
+1. Quit nano with ``CTRL+X``
 1. Restart services of the platform with following command: ``/etc/init.d/startContainers``
 1. Wait for the end of the command
 
