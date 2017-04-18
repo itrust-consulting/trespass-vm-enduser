@@ -2,9 +2,8 @@
 ## OS
 OS type: Ubuntu Server 16.04.1
 
-Username: trespass
-Password: trespass
-
+Username: trespass  
+Password: trespass   
 ## SSH
 A SSH server is running on the virtual machine so it eases the administration (See Links and hints section on how to connect with SSH).
 
@@ -92,8 +91,8 @@ Your certificate and keys must be in pem format. In order to put them in the vir
 1. Log-on with SSH or directly to the machine console using trespass as user and password (pay attention to the keyboard which is set to swiss french, you can change it as explained in **Change Keyboard mapping** section). 
 1. Switch to root with **sudo su** (enter same session password)
 1. Change directory to trespass-docker folder with **cd trespass-docker**
-1. Move your key with mv ../KEY_FILENAME data/rp/keys/cert.key
-1. Move your certificate with mv ../CERT_FILENAME data/rp/certs/cert.crt
+1. Move your key with **mv ../KEY_FILENAME data/rp/keys/cert.key** (replacing **KEY_FILENAME** with the filename of your key)
+1. Move your certificate with **mv ../CERT_FILENAME data/rp/certs/cert.crt** (replacing **CERT_FILENAME** with the filename of your certificate)
 1. Edit genvar with **nano genvar**
 1. Replace **CUSTOM_TLS=false** with **CUSTOM_TLS=true**, so your key and certificate are not deleted when restarting services.
 1. Save with **CTRL+O** and **Enter**
@@ -116,7 +115,7 @@ See [https://www.virtualbox.org/manual/ch01.html#ovf](https://www.virtualbox.org
 ### Introduction to VirtualBox bridged
 See [https://www.linuxbabe.com/virtualbox/a-pretty-good-introduction-to-virtualbox-bridged-networking-mode](https://www.linuxbabe.com/virtualbox/a-pretty-good-introduction-to-virtualbox-bridged-networking-mode)
 
-### ReCAPTCHA
+### reCAPTCHA
 See [https://www.google.com/recaptcha/intro/](https://www.google.com/recaptcha/intro/) for more information on reCAPTCHA
 
 ### SSH
