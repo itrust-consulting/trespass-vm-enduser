@@ -16,14 +16,14 @@ The IP of the machine is displayed on the console of the virtual machine. If no 
 1. Wait for the logon console (The IP address of the machine should appears before the logon);
 1. On your desktop or laptop machine, if under Windows, open notepad as administrator, then open following file: **c:\Windows\System32\Drivers\etc\hosts**; if under Linux, open following file as administrator: **/etc/hosts**; if under MacOS, open following file as administrator: **/private/etc/hosts**.
 1. append the file with following lines (replacing IP_ADDRESS with the IP address from step 5)  
-IP_ADDRESS	trespass.eu  
-IP_ADDRESS	cas.trespass.eu  
-IP_ADDRESS	svn.trespass.eu  
-IP_ADDRESS	arguesecure.trespass.eu  
-IP_ADDRESS      interactor.trespass.eu  
-IP_ADDRESS      redmine.trespass.eu  
-IP_ADDRESS      tkblogs.trespass.eu  
-1. You can access the front-end using your browser with the following address [https://trespass.eu](https://trespass.eu). A default user (with administrator role) has been defined with following credentials:  
+IP_ADDRESS	trespass.local  
+IP_ADDRESS	cas.trespass.local  
+IP_ADDRESS	svn.trespass.local  
+IP_ADDRESS	arguesecure.trespass.local  
+IP_ADDRESS      interactor.trespass.local  
+IP_ADDRESS      redmine.trespass.local  
+IP_ADDRESS      tkblogs.trespass.local  
+1. You can access the front-end using your browser with the following address [https://trespass.local](https://trespass.local). A default user (with administrator role) has been defined with following credentials:  
 Username: trespass  
 Password: Tresp@ss1
 1. Click on **Edit** link in **Manage account** section:  
